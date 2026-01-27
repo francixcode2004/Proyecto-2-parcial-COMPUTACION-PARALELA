@@ -1,0 +1,22 @@
+spark:
+  app_name: "DistributedTransactionAnalytics"
+  master: "local[4]"
+  executor_memory: "4g"
+  executor_cores: 2
+  shuffle_partitions: 8
+  input_partitions: 16
+  local_temp_dir: "tmp/spark-local"
+paths:
+  csv_input: "dataset_transacciones.csv"
+  parquet_input: "dataset_transacciones.parquet"
+  curated_output: "output/curated"
+  analytics_output: "output/analytics"
+  rejected_output: "output/rejected"
+detection:
+  spike_threshold: 0.85
+  std_multiplier: 2.5
+  percentile: 95
+window:
+  failed_tx_interval_minutes: 60
+environment:
+  hadoop_home: "C:/hadoop-3.3.6"

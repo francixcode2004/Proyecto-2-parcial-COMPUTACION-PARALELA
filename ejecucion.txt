@@ -1,0 +1,4 @@
+powershell as admin
+start-all.cmd
+
+ & "C:/Users/francisco/Desktop/8 semestre/PARALELO/paralelo/paralelo/.venv/Scripts/python.exe" -m src.main --config config/app_config.yaml --format csv
